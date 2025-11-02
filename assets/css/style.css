@@ -580,9 +580,18 @@ small {
   background-color: #00695c !important;
 } */
 
-@media (min-width: 1200px) {
+/* @media (min-width: 1200px) {
   #experience .container {
     width: 860px;
+  }
+} */
+
+@media (min-width: 993px){
+  #projects .container{
+    max-width: none;    /* remove cap */
+    width: 100%;
+    padding-left: 24px;   /* keep some breathing room */
+    padding-right: 24px;
   }
 }
 
