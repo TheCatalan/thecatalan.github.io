@@ -586,7 +586,7 @@ small {
   }
 } */
 
-@media (min-width: 993px){
+@media (min-width: 2000px){
   #projects .container{
     max-width: none;    /* remove cap */
     width: 100%;
