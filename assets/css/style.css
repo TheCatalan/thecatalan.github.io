@@ -742,22 +742,34 @@ small {
 
 /* More defined pill-style buttons under each publication */
 .pub-chip {
-  display: inline-block;
-  padding: 4px 14px;
+  display: inline-flex;          /* let us center content */
+  align-items: center;          /* vertical center */
+  justify-content: center;      /* horizontal center */
+
+  /* Size / shape */
+  height: 34px;                 /* fixed height for nice pills */
+  padding: 0 16px;              /* horizontal padding only */
+  border-radius: 999px;
+  box-sizing: border-box;
+
+  /* Typography */
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  border-radius: 999px;
+  font-weight: 500;
+  line-height: 1;               /* important: kill inherited tall line-height */
+
+  /* Colors (same as before) */
   border: 1px solid #ddd;
   background-color: #fafafa;
-  color: #00796b;          /* teal to match the rest of the site */
-  font-weight: 500;
-  line-height: 1.4;
+  color: #00796b;
 }
 
+/* spacing between chips */
 .pub-chip + .pub-chip {
   margin-left: 6px;
 }
+
 
 /* Hover/focus states to make them feel clickable */
 .pub-chip:hover,
