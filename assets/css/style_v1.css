@@ -715,38 +715,3 @@ small {
     background-position-x: 30%;
   }
 }
-
-/* Publications section */
-
-#publications .collection {
-  margin-top: 10px;
-}
-
-.publication-item .fa-file-text-o {
-  color: #555;
-}
-
-.publication-item .pub-title {
-  font-weight: 500;
-  font-size: 1.05rem;
-}
-
-.publication-item .pub-venue {
-  font-size: 0.9rem;
-  margin-top: 2px;
-}
-
-.pub-links {
-  margin-top: 6px;
-}
-
-.pub-chip {
-  padding: 0 10px;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-
-.pub-chip + .pub-chip {
-  margin-left: 4px;
-}
