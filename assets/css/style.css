@@ -737,16 +737,40 @@ small {
 }
 
 .pub-links {
-  margin-top: 6px;
+  margin-top: 8px;
 }
 
+/* More defined pill-style buttons under each publication */
 .pub-chip {
-  padding: 0 10px;
-  font-size: 0.75rem;
+  display: inline-block;
+  padding: 4px 14px;
+  font-size: 0.8rem;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
+  border-radius: 999px;
+  border: 1px solid #ddd;
+  background-color: #fafafa;
+  color: #00796b;          /* teal to match the rest of the site */
+  font-weight: 500;
+  line-height: 1.4;
 }
 
 .pub-chip + .pub-chip {
-  margin-left: 4px;
+  margin-left: 6px;
+}
+
+/* Hover/focus states to make them feel clickable */
+.pub-chip:hover,
+.pub-chip:focus {
+  background-color: #00796b;
+  border-color: #00796b;
+  color: #fff;
+}
+
+/* Slightly tighter on mobile */
+@media only screen and (max-width: 600px) {
+  .pub-chip {
+    padding: 3px 10px;
+    font-size: 0.75rem;
+  }
 }
