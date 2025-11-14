@@ -69,6 +69,58 @@
   <meta name="robots" content="index, follow" /> -->
   <!-- Google Site Verification for indexing -->
   <meta name="google-site-verification" content="_qxK8tePiU2fhnwlwnJ7pkDFnj1k2EiKq_cYGy1Cb84" />
+
+  <!-- Custom styles for Publications section -->
+  <style>
+    .publications-list {
+      background-color: #111827;
+      border-radius: 8px;
+      border: none;
+    }
+    .publications-list .collection-item {
+      background-color: transparent;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      padding-top: 14px;
+      padding-bottom: 14px;
+    }
+    .publications-list .collection-item:last-child {
+      border-bottom: none;
+    }
+    .publication-item .fa-file-text-o {
+      color: #fff;
+      margin-top: 6px;
+    }
+    .publication-item .pub-title {
+      font-weight: 600;
+      font-size: 1.05rem;
+    }
+    .publication-item .pub-venue {
+      font-size: 0.9rem;
+    }
+    .publication-item .pub-links {
+      margin-top: 6px;
+    }
+    .pub-chip {
+      border-radius: 999px;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 2px 10px;
+      margin-right: 4px;
+      margin-bottom: 4px;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      color: #e5e7eb;
+    }
+    .pub-chip:hover {
+      background-color: rgba(255, 255, 255, 0.06);
+    }
+    @media only screen and (max-width: 600px) {
+      .publications-list .collection-item {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -104,6 +156,12 @@
              mdi-av-my-library-books small-->
         <a aria-label="Navigate to the Projects section" href="#projects" class="waves-effect waves-dark teal-text"><i
             class="mdi-av-my-library-books small"></i><span>Projects</span></a>
+      </li>
+
+      <li class="bold">
+        <!-- ICON: mdi-action-description -->
+        <a aria-label="Navigate to the Publications section" href="#publications" class="waves-effect waves-dark teal-text"><i
+            class="mdi-action-description small"></i><span>Publications</span></a>
       </li>
 
       <li class="bold">
@@ -177,6 +235,10 @@
       <li class="bold">
         <a aria-label="Navigate to the Projects section" href="#projects" class="waves-effect waves-dark teal-text"><i
             class="mdi-av-my-library-books small"></i><span>Projects</span></a>
+      </li>
+      <li class="bold">
+        <a aria-label="Navigate to the Publications section" href="#publications" class="waves-effect waves-dark teal-text"><i
+            class="mdi-action-description small"></i><span>Publications</span></a>
       </li>
       <li class="bold">
         <a aria-label="Navigate to the Skills section" href="#skills" class="waves-effect waves-dark teal-text"><i
@@ -460,366 +522,632 @@ of each drug container to estimate the degradation of the drug.
     <!-- Fourth Section: Projects -->
     <section id="projects" class="section scrollspy">
       <h3 class="page-title white-text teal">Projects</h3>
+      <div class="projects-flex">
+        <!-- <div class="card project-card medium">
+          <div class="card medium">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img alt="Collab VR Natural" src="/assets/img/collaborationnatural.png" style="height: 100%; width: 100%" class="activator" />
+            </div>
+            <div class="card-content">
+              <span class="card-title activator teal-text hoverline">Natural Cue VR Collab<i
+                  class="mdi-navigation-more-vert right"></i></span>
+              <p>
+                Research project that investigates VR Natural Comms Usage (ACCEPTED TO CHI '24')
+              </p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text"><small>Accomplishments</small><i
+                  class="mdi-navigation-close right"></i></span>
+              <ul>
+                <li><b>Tools:</b> Unity, Photon Networking (PUN 2), Oculus VR SDK</li>
+                <li>Main Question: Do some combinations of natural work better than others?</li>
+                <li>Study Design: 7 Combinations of Voice, Hand Gestures, Head Gaze.</li>
+                <li>Metrics: Task Completion Time, Object Selection/Manipulation Time, Task Load, System Usability, User Preference.</li>
+                <li>Main Findings: Head Gaze Only is on par with natural cue combinations.</li>
+              </ul>
+              <div class="card-action">
+                <a aria-label="Visit " href="https://dl.acm.org/doi/10.1145/3613904.3642491" target="_blank" data-position="top"
+                  data-tooltip="View Online"
+                  class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+                    class="fa fa-external-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+        <!-- <div class="card project-card medium">
+          <div class="card medium">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img alt="Collab Taxonomy" src="/assets/img/xr-taxonomy.png" style="height: 100%; width: 100%" class="activator" />
+            </div>
+            <div class="card-content">
+              <span class="card-title activator teal-text hoverline">Human XR Collab Taxonomy<i
+                  class="mdi-navigation-more-vert right"></i></span>
+              <p>
+                Taxonomy that details possible actions and properties of XR Collab Tasks (ACCEPTED TO ISMAR '23')
+              </p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text"><small>Accomplishments</small><i
+                  class="mdi-navigation-close right"></i></span>
+              <ul>
+                <li><b>Tools:</b> Zotero</li>
+                <li>Main Question: What are the Actions and Properties of Human-Centered XR Collab Tasks?</li>
+                <li>Actions: Environmental Engagement, Navigation, Communication.</li>
+                <li>Properties: Temporal, Dependency, Location, Structure, Requirements, Individual, Environment, Intended Population.</li>
+              </ul>
+              <div class="card-action">
+                <a aria-label="Visit " href="https://ieeexplore.ieee.org/document/10316494" target="_blank" data-position="top"
+                  data-tooltip="View Online"
+                  class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+                    class="fa fa-external-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+        <div class="card project-card medium">
+          <div class="card medium">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img alt="EarthXR" src="/assets/img/earthxr.png" style="height: 100%; width: 100%" class="activator" />
+            </div>
+            <div class="card-content">
+              <span class="card-title activator teal-text hoverline">EarthXR<i
+                  class="mdi-navigation-more-vert right"></i></span>
+              <p>
+                Project that visualizes the earth and processes such as supply chain, live flights, simulated traffic, etc.
+              </p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text"><small>Accomplishments</small><i
+                  class="mdi-navigation-close right"></i></span>
+              <ul>
+                <li><b>Tools:</b> Unity, Cesium, XRIT, V-Den Hardware (VARLAB @UCF)</li>
+                <li>Able to navigate the earth and switch to street, bird-eye and satellite view.</li>
+                <!-- <li>Study Design: 7 Combinations of Voice, Hand Gestures, Head Gaze.</li> -->
+                <li>Visualizations for live flights, supply chains, traffic simulations available.</li>
+                <li>Project development completed via collaborative efforts by members of the VARLAB @UCF.</li>
+              </ul>
+              <div class="card-action">
+                <a aria-label="Visit " href="https://varlab.cs.ucf.edu/research_highlights/earthxr/" target="_blank" data-position="top"
+                  data-tooltip="View Online"
+                  class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+                    class="fa fa-external-link"></i></a>
+                <!-- <a aria-label="Visit the GitHub repo for  project" href="https://github.com/varadbhogayata/music-player"
+                  target="_blank" data-position="top" data-tooltip="View Source"
+                  class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+                    class="fa fa-github"></i></a> -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card project-card medium">
+          <div class="card medium">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img alt="Perceptually-Enabled Task Guidance" src="/assets/img/ptg.png" style="height: 100%; width: 100%" class="activator" />
+            </div>
+            <div class="card-content">
+              <span class="card-title activator teal-text hoverline">Perceptually-Enabled Task Guidance<i
+                  class="mdi-navigation-more-vert right"></i></span>
+              <p>
+                Project that simulates flight procedure completion in XR (AR and VR separately) with an AI assistant implemented to guide users.
+              </p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text"><small>Accomplishments</small><i
+                  class="mdi-navigation-close right"></i></span>
+              <ul>
+                <li><b>Tools:</b> Unity, SteamVR, Docker, ROS 2, Magic Leap SDK, MRTK</li>
+                <li>Simulation implements procedures such as pre-flight, emergency response, etc.</li>
+                <!-- <li>Study Design: 7 Combinations of Voice, Hand Gestures, Head Gaze.</li> -->
+                <li>Look and Operating cues implemented from task guidance literature for user guidance.</li>
+                <li>Project completed in collaboration with Northrop Grumman and Virginia Tech.</li>
+                <!-- <li>Project development completed via collaborative efforts by members of the VARLAB @UCF.</li> -->
+              </ul>
+              <div class="card-action">
+                <a aria-label="Visit " href="https://www.darpa.mil/research/programs/perceptually-enabled-task-guidance" target="_blank" data-position="top"
+                  data-tooltip="View Online"
+                  class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+                    class="fa fa-external-link"></i></a>
+                <!-- <a aria-label="Visit the GitHub repo for  project" href="https://github.com/varadbhogayata/music-player"
+                  target="_blank" data-position="top" data-tooltip="View Source"
+                  class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+                    class="fa fa-github"></i></a> -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card project-card medium">
+          <div class="card medium">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img alt="Perceptually-Enabled Task Guidance" src="/assets/img/tactile-telepresence.png" style="height: 100%; width: 100%" class="activator" />
+            </div>
+            <div class="card-content">
+              <span class="card-title activator teal-text hoverline">Tactile Telepresence<i
+                  class="mdi-navigation-more-vert right"></i></span>
+              <p>
+                Project that allows remote users to "touch" (vibrate sensors) others in remote locations via an Android application.
+              </p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text"><small>Accomplishments</small><i
+                  class="mdi-navigation-close right"></i></span>
+              <ul>
+                <li><b>Tools:</b> Unity, Vuforia, Flutter, OpenCV</li>
+                <li>VuMarks (custom Vuforia markers) used for tracking haptic devices.</li>
+                <!-- <li>Study Design: 7 Combinations of Voice, Hand Gestures, Head Gaze.</li> -->
+                <li>AR Tracking application built using Vuforia and then ported to Flutter for Android deployment.</li>
+                <!-- <li>Project development completed via collaborative efforts by members of the VARLAB @UCF.</li> -->
+              </ul>
+              <!-- <div class="card-action">
+                <a aria-label="Visit " href="https://www.darpa.mil/research/programs/perceptually-enabled-task-guidance" target="_blank" data-position="top"
+                  data-tooltip="View Online"
+                  class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+                    class="fa fa-external-link"></i></a>
+              </div> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="card project-card medium">
+          <div class="card medium">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img alt="Perceptually-Enabled Task Guidance" src="/assets/img/vr-lung-exam.png" style="height: 100%; width: 100%" class="activator" />
+            </div>
+            <div class="card-content">
+              <span class="card-title activator teal-text hoverline">VR Lung Examination<i
+                  class="mdi-navigation-more-vert right"></i></span>
+              <p>
+                Project that simulates a full lung examination in VR.
+              </p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text"><small>Accomplishments</small><i
+                  class="mdi-navigation-close right"></i></span>
+              <ul>
+                <li><b>Tools:</b> Unity, SteamVR</li>
+                <li>Rigged and animated body setup with realistic breathing pattern for lung examination.</li>
+                <!-- <li>Study Design: 7 Combinations of Voice, Hand Gestures, Head Gaze.</li> -->
+                <li>Grabbable stethoscope implemented via controller interaction to listen to lungs via even-based avatar interaction.</li>
+                <!-- <li>Project development completed via collaborative efforts by members of the VARLAB @UCF.</li> -->
+              </ul>
+              <!-- <div class="card-action">
+                <a aria-label="Visit " href="https://www.darpa.mil/research/programs/perceptually-enabled-task-guidance" target="_blank" data-position="top"
+                  data-tooltip="View Online"
+                  class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+                    class="fa fa-external-link"></i></a>
+              </div> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="card project-card medium">
+          <div class="card medium">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img alt="Perceptually-Enabled Task Guidance" src="/assets/img/fusion-modifier.png" style="height: 100%; width: 100%" class="activator" />
+            </div>
+            <div class="card-content">
+              <span class="card-title activator teal-text hoverline">Autodesk Fusion CAM Post-Processor Modifications<i
+                  class="mdi-navigation-more-vert right"></i></span>
+              <p>
+                Project that inspected and modified javascript post-processors for G-code creation.
+              </p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text"><small>Accomplishments</small><i
+                  class="mdi-navigation-close right"></i></span>
+              <ul>
+                <li><b>Tools:</b> Javascript, Autodesk, Hardware (CNC Milling, Lathe Machines)</li>
+                <li>Modified Javascript post-processors for Fusion for Lathe and Milling Machine operations.</li>
+                <!-- <li>Study Design: 7 Combinations of Voice, Hand Gestures, Head Gaze.</li> -->
+                <li>Outputted and iterated upon G-code for custom part fabrication and streamlined production.</li>
+                <li>Produced and inspected custom fabricated parts for aerospace, oil and gas industries under Highvac Company.</li>
+                <!-- <li>Project development completed via collaborative efforts by members of the VARLAB @UCF.</li> -->
+              </ul>
+              <div class="card-action">
+                <a aria-label="Visit " href="https://highvacco.com/" target="_blank" data-position="top"
+                  data-tooltip="View Online"
+                  class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+                    class="fa fa-external-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+
+        <!-- <div class="card project-card medium">
+          <div class="card medium">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img alt="quiz app" src="/assets/img/project-quizup-logo-1.png" style="height: 100%; width: 100%" class="activator" />
+            </div>
+            <div class="card-content">
+              <span class="card-title activator teal-text hoverline">Quiz Web-App<i
+                  class="mdi-navigation-more-vert right"></i></span>
+              <p>
+                A quiz playing web app based on Django
+              </p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text"><small>Accomplishments</small><i
+                  class="mdi-navigation-close right"></i></span>
+              <ul>
+                <li><b>Tools:</b> Django, HTML, CSS, Bootstrap, SQLite, Heroku</li>
+                <li>Register/login to the web app(with OAuth-based Google Sign-In).</li>
+                <li>Play Quiz and see the leaderboard</li>
+
+              </ul>
+              <div class="card-action">
+                <a aria-label="Visit " href="https://quiz-up-app.herokuapp.com/" target="_blank" data-position="top"
+                  data-tooltip="View Online"
+                  class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+                    class="fa fa-external-link"></i></a>
+                <a aria-label="Visit the GitHub repo for  project" href="https://github.com/varadbhogayata/QuizUp"
+                  target="_blank" data-position="top" data-tooltip="View Source"
+                  class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+                    class="fa fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+        <!-- 1. Django Project -->
+        <!-- <div class="col s12 m6 l6">
+          <div class="card medium">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img alt="django web app" src="/assets/img/project-library-logo.png" style="height: 100%; width: 100%" class="activator" />
+            </div>
+            <div class="card-content">
+              <span class="card-title activator teal-text hoverline">Local Library Web-App<i
+                  class="mdi-navigation-more-vert right"></i></span>
+              <p>
+                A web-app that creates an online catalog for a small local library, where users can browse available books and manage their accounts.
+              </p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text"><small>Accomplishments</small><i
+                  class="mdi-navigation-close right"></i></span>
+              <ul>
+                <li><b>Tools:</b> HTML, CSS, Bootstrap, SQLite, Django, Heroku</li>
+                <li>Users can view list and detail information for books and authors.</li>
+                <li>Admin users can create and manage models.</li>
+                <li>Librarians can renew reserved books.</li>
+
+              </ul>
+              <div class="card-action">
+                <a aria-label="Visit " href="https://django-local-lib.herokuapp.com" target="_blank" data-position="top"
+                  data-tooltip="View Online"
+                  class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+                    class="fa fa-external-link"></i></a>
+                <a aria-label="Visit the GitHub repo for  project" href="https://github.com/varadbhogayata/django-local-library"
+                  target="_blank" data-position="top" data-tooltip="View Source"
+                  class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+                    class="fa fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+        <!-- Flask Project -->
+        <!-- <div class="card project-card medium">
+          <div class="card medium">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img alt="Screenshot of web app" src="/assets/img/project-blog-logo.jpg"
+              style="height: 100%; width: 100%" class="activator" />
+            </div>
+            <div class="card-content">
+              <span class="card-title activator teal-text hoverline">Blog Web-App<i
+                  class="mdi-navigation-more-vert right"></i></span>
+              <p>
+                A simple and extensible blog web-app based on Flask.
+              </p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title teal-text"><small>Accomplishments</small><i
+                  class="mdi-navigation-close right"></i></span>
+              <ul>
+                <li><b>Tools:</b> HTML, CSS, Bootstrap, Flask, SQLAlchemy, Postgresql, Python</li>
+                <li>Users can view posts and contact the admin via Contact Page.</li>
+                <li>Admin can Add, Delete, Update posts.</li>
+
+
+              </ul>
+              <div class="card-action">
+                <a aria-label="Visit Blog website" href="https://flask-heroku-blog.herokuapp.com/" target="_blank" data-position="top"
+                  data-tooltip="View Online"
+                  class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+                    class="fa fa-external-link"></i></a>
+                <a aria-label="Visit the GitHub repo for  project" href="https://github.com/varadbhogayata/flask-blog"
+                  target="_blank" data-position="top" data-tooltip="View Source"
+                  class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+                    class="fa fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+        <!-- VQA -->
+        <!-- <div class="card project-card medium">
+          <div class="card medium">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img alt="Screenshot of  web app" src="/assets/img/project-aim_bert-bias.png" style="height: 100%; width: 100%" class="activator" />
+            </div>
+            <div class="card-content">
+              <span class="card-title activator teal-text hoverline">Visual Question Answering<i
+                  class="mdi-navigation-more-vert right"></i></span>
+              <p>
+                An attention-based classification model that aims at generating an answer for a given input image.
+              </p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title teal-text"><small>Accomplishments</small><i
+                  class="mdi-navigation-close right"></i></span>
+              <ul>
+                <li>Incorporated Convolution Neural Networks (CNN) for extracting image features and Long Short Term
+                  Memory for extracting question
+                  embeddings.</li>
+                <li>Tested the model on the COCO dataset, abstract scenes images, and got 69% overall accuracy on the
+                  VQA evaluation metric.</li>
+
+              </ul>
+              <div class="card-action">
+                <a aria-label="Visit the GitHub repo for  project"
+                  href="https://github.com/varadbhogayata/visual-question-answering" target="_blank"
+                  data-position="top" data-tooltip="View Source"
+                  class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+                    class="fa fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+        <!-- Video Summarizer -->
+        <!-- <div class="card project-card medium">
+          <div class="card medium">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img alt="Screenshot of  web app" src="/assets/img/computer-vision-v2-04.png" style="height: 100%; width: 100%" class="activator" />
+            </div>
+            <div class="card-content">
+              <span class="card-title activator teal-text hoverline">Video Summarizer<i
+                  class="mdi-navigation-more-vert right"></i></span>
+              <p>
+                A Seq2Seq model that generates a short summary of the given input video.
+              </p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title brown-text"><small>Accomplishments</small><i
+                  class="mdi-navigation-close right"></i></span>
+              <ul>
+                <li>Incorporated CNN to detect and classify objects in the video frames and Long Short Term Memory for
+                  generating a summary.</li>
+                <li>Evaluated the model on MSVD (Microsoft Video Description Corpus) dataset; achieved 0.77, 0.71,
+                  0.52 scores respectively on ROGUE,
+                  BLEU, METEOR evaluation metrics.</li>
+
+              </ul>
+              <div class="card-action">
+                <a aria-label="Visit the GitHub repo for  project" href="https://github.com/varadbhogayata/"
+                  target="_blank" data-position="top" data-tooltip="View Source"
+                  class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+                    class="fa fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+        <!-- Image Generator -->
+        <!-- <div class="card project-card medium">
+          <div class="card medium">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img alt="Screenshot of  web app" src="/assets/img/gan.jpg" style="height: 100%; width: 100%" class="activator" />
+            </div>
+            <div class="card-content">
+              <span class="card-title activator teal-text hoverline">Image Generator<i
+                  class="mdi-navigation-more-vert right"></i></span>
+              <p>
+                An image generator based on the concept of adversarial networks (GANs)
+              </p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title brown-text"><small>Accomplishments</small><i
+                  class="mdi-navigation-close right"></i></span>
+              <ul>
+                <li>Developed system was tested on a human-face database and loss was calculated by comparing the PCAs
+                  of generated and original image.</li>
+                <li>Calculated difference in PCA was less than 10%, depicting the successful generation of an image by
+                  the generator.</li>
+
+              </ul>
+              <div class="card-action">
+                <a aria-label="Visit the GitHub repo for  project" href="https://github.com/varadbhogayata/"
+                  target="_blank" data-position="top" data-tooltip="View Source"
+                  class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+                    class="fa fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+        <!-- Head Counting System -->
+        <!-- <div class="card project-card medium">
+          <div class="card medium">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img alt="Screenshot of  web app" src="/assets/img/Blog-Images-Forget-Machine-Learning-Humans-Still-Have-a-Lot-to-Learn-Part-II.jpg" style="height: 100%; width: 100%" class="activator" />
+            </div>
+            <div class="card-content">
+              <span class="card-title activator teal-text hoverline">Head Counting System<i
+                  class="mdi-navigation-more-vert right"></i></span>
+              <p>
+                A system that calculates the attendance of the class from a panoramic image of a live classroom.
+              </p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title brown-text"><small>Accomplishments</small><i
+                  class="mdi-navigation-close right"></i></span>
+              <ul>
+                <li>Used Singular Value Decomposition for image compression; applied various image processing
+                  techniques and morphological operations to
+                  detect the number of heads.</li>
+
+              </ul>
+              <div class="card-action">
+                <a aria-label="Visit the GitHub repo for  project"
+                  href="https://github.com/varadbhogayata/visual-question-answering" target="_blank"
+                  data-position="top" data-tooltip="View Source"
+                  class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+                    class="fa fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+        <!-- ************* -->
+      </div>
+    </section>
+
+    <!-- New Section: Publications -->
+    <section id="publications" class="section scrollspy">
+      <h3 class="page-title white-text teal">Recent Publications</h3>
       <div class="container">
         <div class="row">
-
-          <div class="col s12 m6 l4">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="Collab VR Natural" src="/assets/img/collaborationnatural.png" style="height: 100%; width: 100%" class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline">Natural Cue VR Collab<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                  Research project that investigates VR Natural Comms Usage (ACCEPTED TO CHI '24')
-                </p>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title grey-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li><b>Tools:</b> Unity, Photon Networking (PUN 2), Oculus VR SDK</li>
-                  <li>Main Question: Do some combinations of natural work better than others?</li>
-                  <li>Study Design: 7 Combinations of Voice, Hand Gestures, Head Gaze.</li>
-                  <li>Metrics: Task Completion Time, Object Selection/Manipulation Time, Task Load, System Usability, User Preference.</li>
-                  <li>Main Findings: Head Gaze Only is on par with natural cue combinations.</li>
-                </ul>
-                <div class="card-action">
-                  <a aria-label="Visit " href="https://dl.acm.org/doi/10.1145/3613904.3642491" target="_blank" data-position="top"
-                    data-tooltip="View Online"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-external-link"></i></a>
-                  <!-- <a aria-label="Visit the GitHub repo for  project" href="https://github.com/varadbhogayata/music-player"
-                    target="_blank" data-position="top" data-tooltip="View Source"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-github"></i></a> -->
+          <div class="col s12">
+            <ul class="collection z-depth-1 publications-list">
+              <!-- Publication 1 -->
+              <li class="collection-item publication-item">
+                <div class="row" style="margin-bottom: 0;">
+                  <div class="col s1 m1">
+                    <i class="fa fa-file-text-o tiny"></i>
+                  </div>
+                  <div class="col s11 m11">
+                    <a href="#" class="pub-title teal-text hoverline">
+                      XR-First Design for Productivity: A Conceptual Framework for Enabling Efficient Task Switching in XR
+                    </a>
+                    <p class="grey-text text-lighten-1 pub-venue">
+                      2025 IEEE International Symposium on Mixed and Augmented Reality Adjunct (ISMAR-Adjunct ’25)
+                    </p>
+                    <div class="pub-links">
+                      <a class="btn-flat waves-effect pub-chip" href="#" target="_blank">PDF</a>
+                      <a class="btn-flat waves-effect pub-chip" href="#">Cite</a>
+                      <a class="btn-flat waves-effect pub-chip" href="#" target="_blank">DOI</a>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </li>
+
+              <!-- Publication 2 -->
+              <li class="collection-item publication-item">
+                <div class="row" style="margin-bottom: 0;">
+                  <div class="col s1 m1">
+                    <i class="fa fa-file-text-o tiny"></i>
+                  </div>
+                  <div class="col s11 m11">
+                    <a href="#" class="pub-title teal-text hoverline">
+                      A Culturally-diverse Multilingual Multimodal Video Benchmark &amp; Model
+                    </a>
+                    <p class="grey-text text-lighten-1 pub-venue">
+                      Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing (EMNLP ’25)
+                    </p>
+                    <div class="pub-links">
+                      <a class="btn-flat waves-effect pub-chip" href="#" target="_blank">PDF</a>
+                      <a class="btn-flat waves-effect pub-chip" href="#">Cite</a>
+                      <a class="btn-flat waves-effect pub-chip" href="#" target="_blank">Code</a>
+                      <a class="btn-flat waves-effect pub-chip" href="#" target="_blank">Dataset</a>
+                      <a class="btn-flat waves-effect pub-chip" href="#" target="_blank">Project</a>
+                      <a class="btn-flat waves-effect pub-chip" href="#" target="_blank">DOI</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Publication 3 -->
+              <li class="collection-item publication-item">
+                <div class="row" style="margin-bottom: 0;">
+                  <div class="col s1 m1">
+                    <i class="fa fa-file-text-o tiny"></i>
+                  </div>
+                  <div class="col s11 m11">
+                    <a href="#" class="pub-title teal-text hoverline">
+                      Mitigating Response Delays in Free-Form Conversations with LLM-powered Intelligent Virtual Agents
+                    </a>
+                    <p class="grey-text text-lighten-1 pub-venue">
+                      Proceedings of the 7th ACM Conference on Conversational User Interfaces (CUI ’25)
+                    </p>
+                    <div class="pub-links">
+                      <a class="btn-flat waves-effect pub-chip" href="#" target="_blank">PDF</a>
+                      <a class="btn-flat waves-effect pub-chip" href="#">Cite</a>
+                      <a class="btn-flat waves-effect pub-chip" href="#" target="_blank">Code</a>
+                      <a class="btn-flat waves-effect pub-chip" href="#" target="_blank">Slides</a>
+                      <a class="btn-flat waves-effect pub-chip" href="#" target="_blank">Video</a>
+                      <a class="btn-flat waves-effect pub-chip" href="#" target="_blank">DOI</a>
+                      <a class="btn-flat waves-effect pub-chip" href="#" target="_blank">Suppl. Material</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Publication 4 -->
+              <li class="collection-item publication-item">
+                <div class="row" style="margin-bottom: 0;">
+                  <div class="col s1 m1">
+                    <i class="fa fa-file-text-o tiny"></i>
+                  </div>
+                  <div class="col s11 m11">
+                    <a href="#" class="pub-title teal-text hoverline">
+                      All Languages Matter: Evaluating LLMs on Culturally Diverse 100 Languages
+                    </a>
+                    <p class="grey-text text-lighten-1 pub-venue">
+                      Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR ’25)
+                    </p>
+                    <div class="pub-links">
+                      <a class="btn-flat waves-effect pub-chip" href="#" target="_blank">PDF</a>
+                      <a class="btn-flat waves-effect pub-chip" href="#">Cite</a>
+                      <a class="btn-flat waves-effect pub-chip" href="#" target="_blank">Code</a>
+                      <a class="btn-flat waves-effect pub-chip" href="#" target="_blank">Dataset</a>
+                      <a class="btn-flat waves-effect pub-chip" href="#" target="_blank">Project</a>
+                      <a class="btn-flat waves-effect pub-chip" href="#" target="_blank">Poster</a>
+                      <a class="btn-flat waves-effect pub-chip" href="#" target="_blank">Slides</a>
+                      <a class="btn-flat waves-effect pub-chip" href="#" target="_blank">Video</a>
+                      <a class="btn-flat waves-effect pub-chip" href="#" target="_blank">DOI</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Publication 5 -->
+              <li class="collection-item publication-item">
+                <div class="row" style="margin-bottom: 0;">
+                  <div class="col s1 m1">
+                    <i class="fa fa-file-text-o tiny"></i>
+                  </div>
+                  <div class="col s11 m11">
+                    <a href="#" class="pub-title teal-text hoverline">
+                      Takeaways from Applying LLM Capabilities to Multiple Conversational Avatars in a VR Pilot Study
+                    </a>
+                    <p class="grey-text text-lighten-1 pub-venue">
+                      Pilot Study Report (arXiv preprint ’24)
+                    </p>
+                    <div class="pub-links">
+                      <a class="btn-flat waves-effect pub-chip" href="#" target="_blank">PDF</a>
+                      <a class="btn-flat waves-effect pub-chip" href="#">Cite</a>
+                      <a class="btn-flat waves-effect pub-chip" href="#" target="_blank">DOI</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <div class="right-align" style="margin-top: 10px;">
+              <a href="/publications/" class="teal-text hoverline">See all publications
+                <i class="mdi-navigation-arrow-forward tiny" style="margin-left: 4px;"></i>
+              </a>
             </div>
           </div>
-
-          <div class="col s12 m6 l4">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="Collab Taxonomy" src="/assets/img/xr-taxonomy.png" style="height: 100%; width: 100%" class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline">Human XR Collab Taxonomy<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                  Taxonomy that details possible actions and properties of XR Collab Tasks (ACCEPTED TO ISMAR '23')
-                </p>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title grey-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li><b>Tools:</b> Zotero</li>
-                  <li>Main Question: What are the Actions and Properties of Human-Centered XR Collab Tasks?</li>
-                  <!-- <li>Study Design: 7 Combinations of Voice, Hand Gestures, Head Gaze.</li> -->
-                  <li>Actions: Environmental Engagement, Navigation, Communication.</li>
-                  <li>Properties: Temporal, Dependency, Location, Structure, Requirements, Individual, Environment, Intended Population.</li>
-                </ul>
-                <div class="card-action">
-                  <a aria-label="Visit " href="https://ieeexplore.ieee.org/document/10316494" target="_blank" data-position="top"
-                    data-tooltip="View Online"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-external-link"></i></a>
-                  <!-- <a aria-label="Visit the GitHub repo for  project" href="https://github.com/varadbhogayata/music-player"
-                    target="_blank" data-position="top" data-tooltip="View Source"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-github"></i></a> -->
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col s12 m6 l4">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="EarthXR" src="/assets/img/earthxr.png" style="height: 100%; width: 100%" class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline">EarthXR<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                  Project that visualizes the earth and processes such as supply chain, live flights, simulated traffic, etc.
-                </p>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title grey-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li><b>Tools:</b> Unity, Cesium, XRIT, V-Den Hardware (VARLAB @UCF)</li>
-                  <li>Able to navigate the earth and switch to street, bird-eye and satellite view.</li>
-                  <!-- <li>Study Design: 7 Combinations of Voice, Hand Gestures, Head Gaze.</li> -->
-                  <li>Visualizations for live flights, supply chains, traffic simulations available.</li>
-                  <li>Project development completed via collaborative efforts by members of the VARLAB @UCF.</li>
-                </ul>
-                <div class="card-action">
-                  <a aria-label="Visit " href="https://varlab.cs.ucf.edu/research_highlights/earthxr/" target="_blank" data-position="top"
-                    data-tooltip="View Online"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-external-link"></i></a>
-                  <!-- <a aria-label="Visit the GitHub repo for  project" href="https://github.com/varadbhogayata/music-player"
-                    target="_blank" data-position="top" data-tooltip="View Source"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-github"></i></a> -->
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- <div class="col s12 m6 l4">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="quiz app" src="/assets/img/project-quizup-logo-1.png" style="height: 100%; width: 100%" class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline">Quiz Web-App<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                  A quiz playing web app based on Django
-                </p>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title grey-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li><b>Tools:</b> Django, HTML, CSS, Bootstrap, SQLite, Heroku</li>
-                  <li>Register/login to the web app(with OAuth-based Google Sign-In).</li>
-                  <li>Play Quiz and see the leaderboard</li>
-
-                </ul>
-                <div class="card-action">
-                  <a aria-label="Visit " href="https://quiz-up-app.herokuapp.com/" target="_blank" data-position="top"
-                    data-tooltip="View Online"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-external-link"></i></a>
-                  <a aria-label="Visit the GitHub repo for  project" href="https://github.com/varadbhogayata/QuizUp"
-                    target="_blank" data-position="top" data-tooltip="View Source"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-github"></i></a>
-                </div>
-              </div>
-            </div>
-          </div> -->
-
-          <!-- 1. Django Project -->
-          <!-- <div class="col s12 m6 l6">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="django web app" src="/assets/img/project-library-logo.png" style="height: 100%; width: 100%" class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline">Local Library Web-App<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                  A web-app that creates an online catalog for a small local library, where users can browse available books and manage their accounts.
-                </p>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title grey-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li><b>Tools:</b> HTML, CSS, Bootstrap, SQLite, Django, Heroku</li>
-                  <li>Users can view list and detail information for books and authors.</li>
-                  <li>Admin users can create and manage models.</li>
-                  <li>Librarians can renew reserved books.</li>
-
-                </ul>
-                <div class="card-action">
-                  <a aria-label="Visit " href="https://django-local-lib.herokuapp.com" target="_blank" data-position="top"
-                    data-tooltip="View Online"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-external-link"></i></a>
-                  <a aria-label="Visit the GitHub repo for  project" href="https://github.com/varadbhogayata/django-local-library"
-                    target="_blank" data-position="top" data-tooltip="View Source"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-github"></i></a>
-                </div>
-              </div>
-            </div>
-          </div> -->
-
-          <!-- Flask Project -->
-          <!-- <div class="col s12 m6 l4">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="Screenshot of web app" src="/assets/img/project-blog-logo.jpg"
-                style="height: 100%; width: 100%" class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline">Blog Web-App<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                  A simple and extensible blog web-app based on Flask.
-                </p>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title teal-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li><b>Tools:</b> HTML, CSS, Bootstrap, Flask, SQLAlchemy, Postgresql, Python</li>
-                  <li>Users can view posts and contact the admin via Contact Page.</li>
-                  <li>Admin can Add, Delete, Update posts.</li>
-
-
-                </ul>
-                <div class="card-action">
-                  <a aria-label="Visit Blog website" href="https://flask-heroku-blog.herokuapp.com/" target="_blank" data-position="top"
-                    data-tooltip="View Online"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-external-link"></i></a>
-                  <a aria-label="Visit the GitHub repo for  project" href="https://github.com/varadbhogayata/flask-blog"
-                    target="_blank" data-position="top" data-tooltip="View Source"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-github"></i></a>
-                </div>
-              </div>
-            </div>
-          </div> -->
-
-          <!-- VQA -->
-          <!-- <div class="col s12 m6 l4">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="Screenshot of  web app" src="/assets/img/project-aim_bert-bias.png" style="height: 100%; width: 100%" class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline">Visual Question Answering<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                  An attention-based classification model that aims at generating an answer for a given input image.
-                </p>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title teal-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li>Incorporated Convolution Neural Networks (CNN) for extracting image features and Long Short Term
-                    Memory for extracting question
-                    embeddings.</li>
-                  <li>Tested the model on the COCO dataset, abstract scenes images, and got 69% overall accuracy on the
-                    VQA evaluation metric.</li>
-
-                </ul>
-                <div class="card-action">
-                  <a aria-label="Visit the GitHub repo for  project"
-                    href="https://github.com/varadbhogayata/visual-question-answering" target="_blank"
-                    data-position="top" data-tooltip="View Source"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-github"></i></a>
-                </div>
-              </div>
-            </div>
-          </div> -->
-
-          <!-- Video Summarizer -->
-          <!-- <div class="col s12 m6 l4">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="Screenshot of  web app" src="/assets/img/computer-vision-v2-04.png" style="height: 100%; width: 100%" class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline">Video Summarizer<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                  A Seq2Seq model that generates a short summary of the given input video.
-                </p>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title brown-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li>Incorporated CNN to detect and classify objects in the video frames and Long Short Term Memory for
-                    generating a summary.</li>
-                  <li>Evaluated the model on MSVD (Microsoft Video Description Corpus) dataset; achieved 0.77, 0.71,
-                    0.52 scores respectively on ROGUE,
-                    BLEU, METEOR evaluation metrics.</li>
-
-                </ul>
-                <div class="card-action">
-                  <a aria-label="Visit the GitHub repo for  project" href="https://github.com/varadbhogayata/"
-                    target="_blank" data-position="top" data-tooltip="View Source"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-github"></i></a>
-                </div>
-              </div>
-            </div>
-          </div> -->
-
-          <!-- Image Generator -->
-          <!-- <div class="col s12 m6 l4">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="Screenshot of  web app" src="/assets/img/gan.jpg" style="height: 100%; width: 100%" class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline">Image Generator<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                  An image generator based on the concept of adversarial networks (GANs)
-                </p>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title brown-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li>Developed system was tested on a human-face database and loss was calculated by comparing the PCAs
-                    of generated and original image.</li>
-                  <li>Calculated difference in PCA was less than 10%, depicting the successful generation of an image by
-                    the generator.</li>
-
-                </ul>
-                <div class="card-action">
-                  <a aria-label="Visit the GitHub repo for  project" href="https://github.com/varadbhogayata/"
-                    target="_blank" data-position="top" data-tooltip="View Source"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-github"></i></a>
-                </div>
-              </div>
-            </div>
-          </div> -->
-
-          <!-- Head Counting System -->
-          <!-- <div class="col s12 m6 l4">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="Screenshot of  web app" src="/assets/img/Blog-Images-Forget-Machine-Learning-Humans-Still-Have-a-Lot-to-Learn-Part-II.jpg" style="height: 100%; width: 100%" class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline">Head Counting System<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                  A system that calculates the attendance of the class from a panoramic image of a live classroom.
-                </p>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title brown-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li>Used Singular Value Decomposition for image compression; applied various image processing
-                    techniques and morphological operations to
-                    detect the number of heads.</li>
-
-                </ul>
-                <div class="card-action">
-                  <a aria-label="Visit the GitHub repo for  project"
-                    href="https://github.com/varadbhogayata/visual-question-answering" target="_blank"
-                    data-position="top" data-tooltip="View Source"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-github"></i></a>
-                </div>
-              </div>
-            </div>
-          </div> -->
-
-          <!-- ************* -->
         </div>
       </div>
     </section>
+
 
     <!-- Fifth Section: Skills -->
     <section id="skills" class="section scrollspy">
@@ -903,6 +1231,9 @@ of each drug container to estimate the degradation of the drug.
               </div>
               <div class="col s4 m2">
                 <img alt="" src="/assets/img/sk-learn-logo-1-500x500.jpg" class="responsive-img" />Sci-kit Learn
+              </div>
+              <div class="col s4 m2">
+                <img alt="" src="/assets/img/unitynew-logo.png" class="responsive-img" />Unity
               </div>
             </div>
           </div>
