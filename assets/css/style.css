@@ -291,7 +291,21 @@ li.logo span {
 }
 
 .container {
-  width: 95%;
+  width: 100%;
+}
+
+#projects .projects-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+#projects .project-card {
+  flex: 0 0 360px;   /* fixed width */
+  width: 360px;
+  max-width: 100%;
+  height: 460px;     /* optional */
 }
 
 h3 {
@@ -566,9 +580,18 @@ small {
   background-color: #00695c !important;
 } */
 
-@media (min-width: 1200px) {
+/* @media (min-width: 1200px) {
   #experience .container {
     width: 860px;
+  }
+} */
+
+@media (min-width: 993px){
+  #projects .container{
+    max-width: none;    /* remove cap */
+    width: 100%;
+    padding-left: 24px;   /* keep some breathing room */
+    padding-right: 24px;
   }
 }
 
